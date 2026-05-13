@@ -8,19 +8,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Added CSS to make it mobile-friendly without changing the original design -->
+    <style>
+        /* Mobile Responsiveness Rules */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: inherit;
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Navbar Mobile */
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none; /* Hidden by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                gap: 15px;
+            }
+            .nav-links.active {
+                display: flex; /* Shown when toggled */
+            }
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            /* Hero Section Mobile */
+            .hero .container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            .hero-btns {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .hero-btns a {
+                width: 100%;
+                max-width: 300px;
+            }
+            .hero-image {
+                margin-top: 40px;
+            }
+
+            /* Grids Mobile */
+            .features-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+                padding: 0 15px;
+            }
+            
+            /* CTA Mobile */
+            .cta .container {
+                padding: 40px 15px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                    <img src="img/logo.png" alt="FewStep Logo" class="header-logo">
-                    Few<span>Step</span>
-                </a>
-            <ul class="nav-links">
+                <img src="img/logo.png" alt="FewStep Logo" class="header-logo">
+                Few<span>Step</span>
+            </a>
+            <!-- Added a Hamburger menu button for mobile -->
+            <button class="menu-toggle" id="mobile-menu-btn">☰</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="privacy.html">Privacy Policy </a></li>
                 <li><a href="terms.html">Terms & Conditions</a></li>
-
                 <li><a href="https://github.com/21ambuj/FewStep-/releases/download/FewStep/FewStep.apk" class="btn-small">Download APK</a></li>
             </ul>
         </div>
@@ -130,6 +215,14 @@
         }, { threshold: 0.1 });
 
         reveals.forEach(el => observer.observe(el));
+
+        // Added Mobile Menu Toggle Script
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
