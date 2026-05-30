@@ -1,7 +1,7 @@
 {
-  "latestVersionCode": 478,
-  "latestVersionName": "4.7.8",
+  "latestVersionCode": 479,
+  "latestVersionName": "4.7.9",
   "apkUrl": "https://github.com/21ambuj/FewStep-/releases/download/FewStep/FewStep.apk",
-  "releaseNotes": "🚀 What's New:\n• Brand New Enterprise Admin Dashboard\n• Advanced Visual Analytics & Stat Tracking\n• Global System Controls & Maintenance Mode\n• Bug fixes and performance improvements",
+  "releaseNotes": "Bug fixes and update cache clearing",
   "forceUpdate": false
 }
