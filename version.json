@@ -1,6 +1,6 @@
 {
-  "latestVersionCode": 479,
-  "latestVersionName": "4.7.9",
+  "latestVersionCode": 480,
+  "latestVersionName": "4.8.0",
   "apkUrl": "https://github.com/21ambuj/FewStep-/releases/download/FewStep/FewStep-v4.8.0.apk",
   "releaseNotes": "Bug fixes and update cache clearing",
   "forceUpdate": false
